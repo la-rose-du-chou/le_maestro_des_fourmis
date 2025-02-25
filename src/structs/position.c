@@ -102,21 +102,21 @@ Position *position_set_y_size(Position *position, const double value) {
 // modify values
 
 Position *position_add_x(Position *position, const double value) {
-  position->x = value;
+  position->x += value;
   return position; 
 }
 
 Position *position_add_y(Position *position, const double value) {
-  position->y = value;
+  position->y += value;
   return position; 
 }
 
 Position *position_add_x_size(Position *position, const double value) {
-  position->x_size = value;
+  position->x_size += value;
   return position; 
 }
 
 Position *position_add_y_size(Position *position, const double value) {
-  position->y_size = value;
+  position->y_size += value;
   return position; 
 }
