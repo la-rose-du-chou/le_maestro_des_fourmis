@@ -1,4 +1,2 @@
-cmake_minimum_required(VERSION 3.5)
-set(CMAKE_C_STANDARD 11)
-
-project(LeMaestroDesFourmis C)
+add_library(position SHARED structs/position.c structs/position.h)
+add_library(weapon SHARED structs/weapon.c structs/weapon.h)

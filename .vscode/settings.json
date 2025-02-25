@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "weapon.h": "c",
+    "stdlib.h": "c",
+    "*.inc": "c"
+  }
+}
