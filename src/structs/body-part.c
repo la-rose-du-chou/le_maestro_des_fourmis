@@ -32,7 +32,7 @@ BodyPart *body_part_create_full(const BodySection section, const int health, con
   return body_part;
 }
 
-BodyPart *body_part_fill_full(BodyPart *body_part, BodySection section, const int health, const int protection) {
+BodyPart *body_part_fill_full(BodyPart *body_part, const BodySection section, const int health, const int protection) {
   assert(counter > 0);
   body_part->section = section;
   body_part->health = health;

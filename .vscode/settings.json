@@ -2,6 +2,6 @@
   "files.associations": {
     "stdlib.h": "c",
     "*.inc": "c",
-    "position.h": "c"
+    "body-part.h": "c"
   }
 }
