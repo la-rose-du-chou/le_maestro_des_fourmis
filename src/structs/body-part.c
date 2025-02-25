@@ -22,22 +22,35 @@ bool body_part_finish(void) {
 // creation and destruction functions
 
 BodyPart *body_part_create_full(const BodySection section, const int health, const int protection) {
-
+  assert(counter > 0);
+  BodyPart *body_part = malloc(sizeof (BodyPart));
+  if (body_part != NULL) {
+    body_part->section = section;
+    body_part->health = health;
+    body_part->protection = protection;
+  }
+  return body_part;
 }
 
-BodyPart *body_part_fill_full(BodyPart body_part, BodySection section, const int health, const int protection) {
-  
+BodyPart *body_part_fill_full(BodyPart *body_part, BodySection section, const int health, const int protection) {
+  assert(counter > 0);
+  body_part->section = section;
+  body_part->health = health;
+  body_part->protection = protection;
+  return body_part;
 }
 
 int body_part_default_health = 100, body_part_default_protection = 100;
 BodySection body_part_default_body_section = HEAD;
 
-BodyPart *body_part_create_full(void) {
-
+BodyPart *body_part_create_default(void) { 
+  assert(counter > 0);
+  return body_part_create_full(body_part_default_body_section, body_part_default_health, body_part_default_protection); 
 }
 
 void body_part_destroy(BodyPart *body_part) {
-  
+  assert(counter > 0);
+  free(body_part);
 }
 
 // copy and clone functions
@@ -61,28 +74,33 @@ int body_part_get_protection(const BodyPart *body_part) { return body_part->prot
 
 // setters
 
-BodyPart *body_part_set_health(BodyPart *body_part) {
-
+BodyPart *body_part_set_health(BodyPart *body_part, const int value) {
+  body_part->health = value;
+  return body_part;
 }
 
-BodyPart *body_part_set_protection(BodyPart *body_part) {
-
+BodyPart *body_part_set_protection(BodyPart *body_part, const int value) {
+  body_part->protection = value;
+  return body_part;
 }
 
 // modify values
 
-int body_part_add_health(BodyPart *body_part, const int value) {
-
+BodyPart *body_part_add_health(BodyPart *body_part, const int value) {
+  body_part->health += value;
+  return body_part;
 }
 
-int body_part_add_protection(BodyPart *body_part, const int value) {
-
+BodyPart *body_part_add_protection(BodyPart *body_part, const int value) {
+  body_part->protection += value;
+  return body_part;
 }
 
 // damage function
 
 BodyPart *body_part_take_damage(BodyPart *body_part, const int value) {
-  // TODO
+  // TODO : decide of a ratio to remove health depending on the quantity of protection
+  return body_part;
 }
 
 // verify death

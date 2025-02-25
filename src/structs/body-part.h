@@ -48,8 +48,8 @@ extern BodyPart *body_part_set_protection(BodyPart *body_part, const int value);
 
 // modify values
 
-extern int body_part_add_health(BodyPart *body_part, const int value);
-extern int body_part_add_protection(BodyPart *body_part, const int value);
+extern BodyPart *body_part_add_health(BodyPart *body_part, const int value);
+extern BodyPart *body_part_add_protection(BodyPart *body_part, const int value);
 
 // damage function
 
