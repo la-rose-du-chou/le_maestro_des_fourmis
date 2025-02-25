@@ -16,12 +16,12 @@ int main(void) {
     body_part_add_health(part, 23);
     assert(part->health == 33);
     body_part_add_protection(part, 56);
-    assert(part->health == 60);
+    assert(part->protection == 60);
 
     body_part_add_health(part, -3);
     assert(part->health == 30);
     body_part_add_protection(part, -6);
-    assert(part->health == 54);
+    assert(part->protection == 54);
 
     body_part_destroy(part);
   }

@@ -16,7 +16,7 @@ int main(void) {
     body_part_set_health(part, 23);
     assert(part->health == 23);
     body_part_set_protection(part, 56);
-    assert(part->health == 56);
+    assert(part->protection == 56);
 
     body_part_destroy(part);
   }
