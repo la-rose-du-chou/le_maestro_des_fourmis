@@ -39,8 +39,7 @@ extern Position *position_set_y(Position *position, const double value);
 extern Position *position_set_x_size(Position *position, const double value);
 extern Position *position_set_y_size(Position *position, const double value);
 
-// TODO : collisions
-// TODO : function to check if two pos overlap
-// TODO : add tostring, fwrite and fread
+// TODO : collisions (functions to check if two pos overlap)
+// TODO : add tostring (maybe for debugging), fwrite and fread
 
 #endif // POSITION_H

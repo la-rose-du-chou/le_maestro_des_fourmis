@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "stdlib.h": "c",
-    "*.inc": "c"
+    "*.inc": "c",
+    "position.h": "c"
   }
 }
