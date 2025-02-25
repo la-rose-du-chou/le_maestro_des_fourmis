@@ -1,7 +1,0 @@
-{
-  "files.associations": {
-    "stdlib.h": "c",
-    "*.inc": "c",
-    "body-part.h": "c"
-  }
-}

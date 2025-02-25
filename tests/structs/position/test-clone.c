@@ -9,7 +9,7 @@
 #include "../../../src/structs/position.inc"
 
 int main(void) {
-  assert(position_init());
+  position_init();
 	{
     Position *pos = position_create_full(1, 2, 3, 4);
     Position *pos2 = position_clone(pos);
@@ -22,6 +22,6 @@ int main(void) {
     position_destroy(pos);
     position_destroy(pos2);
   }
-	assert(position_finish());
+	position_finish();
   return EXIT_SUCCESS;
 }
