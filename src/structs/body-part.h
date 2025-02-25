@@ -24,7 +24,7 @@ extern bool body_part_finish(void);
 // creation and destruction functions
 
 extern BodyPart *body_part_create_full(const BodySection section, const int health, const int protection);
-extern BodyPart *body_part_fill_full(BodyPart body_part, BodySection section, const int health, const int protection);
+extern BodyPart *body_part_fill_full(BodyPart *body_part, BodySection section, const int health, const int protection);
 extern int body_part_default_health, body_part_default_protection;
 extern BodySection body_part_default_body_section;
 extern BodyPart *body_part_create_default(void);
@@ -37,7 +37,7 @@ extern BodyPart *body_part_clone(const BodyPart *src);
 
 // getters
 
-extern BodySection body_part_get_secton(const BodyPart *body_part);
+extern BodySection body_part_get_section(const BodyPart *body_part);
 extern int body_part_get_health(const BodyPart *body_part);
 extern int body_part_get_protection(const BodyPart *body_part);
 

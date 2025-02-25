@@ -99,10 +99,11 @@ BodyPart *body_part_add_protection(BodyPart *body_part, const int value) {
 // damage function
 
 BodyPart *body_part_take_damage(BodyPart *body_part, const int value) {
+  if (body_part->health < 0) return body_part; // do nothing, as any health below 0 is considered inmortal
   // TODO : decide of a ratio to remove health depending on the quantity of protection
   return body_part;
 }
 
 // verify death
 
-bool body_part_is_dead(BodyPart *body_part) { return body_part->health <= 0; }
+bool body_part_is_dead(BodyPart *body_part) { return body_part->health == 0; }
