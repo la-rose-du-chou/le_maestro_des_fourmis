@@ -42,8 +42,8 @@ Position *position_fill_full(Position *position, const double x, const double y,
   return position;
 }
 
-double position_default_x, position_default_y = 0;
-double position_default_x_size, position_default_y_size = 1;
+double position_default_x = 0, position_default_y = 0;
+double position_default_x_size = 1, position_default_y_size = 1;
 
 Position *position_create_default(void) {
   assert(counter > 0);
@@ -96,5 +96,27 @@ Position *position_set_x_size(Position *position, const double value) {
 
 Position *position_set_y_size(Position *position, const double value) { 
   position->y_size = value;
+  return position; 
+}
+
+// modify values
+
+Position *position_add_x(Position *position, const double value) {
+  position->x += value;
+  return position; 
+}
+
+Position *position_add_y(Position *position, const double value) {
+  position->y += value;
+  return position; 
+}
+
+Position *position_add_x_size(Position *position, const double value) {
+  position->x_size += value;
+  return position; 
+}
+
+Position *position_add_y_size(Position *position, const double value) {
+  position->y_size += value;
   return position; 
 }
