@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #include "./weapon.inc"
 
@@ -58,6 +59,10 @@ Weapon* weapon_create_default(){
     return weapon_create("",0,0,0,0,0.0,0);
   }
 
+void weapon_destroy(Weapon* weapon){
+    free(weapon);
+}
+
 
 char* weapon_get_name(Weapon* weapon){
     return weapon->name;}
@@ -70,7 +75,7 @@ int weapon_get_precision(Weapon* weapon){
         return weapon->precision;
     }
 
-int weapon_get_precision(Weapon* weapon){
+int weapon_get_perforation(Weapon* weapon){
     return weapon->perforation;
 }
 
@@ -103,6 +108,10 @@ void weapon_set_precision(Weapon* weapon,int precision){
 
 void weapon_set_damage(Weapon* weapon, int damage){
     weapon->damage = damage;
+}
+
+void weapon_set_range(Weapon* weapon, int range){
+    weapon->range = range;
 }
 
 

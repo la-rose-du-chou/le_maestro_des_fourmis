@@ -8,8 +8,8 @@
 #include <assert.h>
 #include <string.h>
 
-#include "../src/structs/weapon.h"
-#include "../src/structs/weapon.inc"
+#include "../../../src/structs/weapon.h"
+#include "../../../src/structs/weapon.inc"
 
 int main(void){
     weapon_init();
@@ -32,7 +32,7 @@ int main(void){
 
         //Test of the create_default function
                 
-        assert(strcmp(fourEyes->name, "") == 0); 
+        assert(strcmp(ip->name, "") == 0); 
         assert(ip->precision == 0);
         assert(ip->perforation == 0); 
         assert(ip->range == 0);

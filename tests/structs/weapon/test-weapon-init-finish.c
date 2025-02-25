@@ -7,7 +7,7 @@
 
 #include <assert.h>
 
-#include "../src/structs/weapon.h"
+#include "../../../src/structs/weapon.h"
 
 int main(void){
     

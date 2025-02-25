@@ -8,7 +8,8 @@
 #include <assert.h>
 #include <string.h>
 
-#include "../src/structs/weapon.h"
+
+#include "../../../src/structs/weapon.h"
 
 int main(void){
 
@@ -19,13 +20,14 @@ int main(void){
 
     weapon_set_name(ip,"ip");
     weapon_set_damage(ip,damage);
+    weapon_set_precision(ip,precision);
     weapon_set_perforation(ip,perforation);
     weapon_set_range(ip, range);
     weapon_set_ammo_capacity(ip,ammo_capacity);
     weapon_set_reload_time(ip,reload_time);
     weapon_set_noise(ip,noise);
 
-    assert(strcmp(weapon_get_name(ip), "")==0); 
+    assert(strcmp(weapon_get_name(ip), "ip")==0); 
     assert(weapon_get_precision(ip) == precision);
     assert(weapon_get_perforation(ip) == perforation); 
     assert(weapon_get_range(ip) == range);
