@@ -42,8 +42,8 @@ Position *position_fill_full(Position *position, const double x, const double y,
   return position;
 }
 
-double position_default_x, position_default_y = 0;
-double position_default_x_size, position_default_y_size = 1;
+double position_default_x = 0, position_default_y = 0;
+double position_default_x_size = 1, position_default_y_size = 1;
 
 Position *position_create_default(void) {
   assert(counter > 0);
